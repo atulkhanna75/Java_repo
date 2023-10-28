@@ -1,0 +1,10 @@
+
+<div class="product-card" *ngIf="product">
+    <img [src]="product.thumbnail">
+    <p>Product ID: {{ product.id }}</p>
+    <p>Name: {{ product.title }}</p>
+    <p class="price">Price: ${{ product.price }}</p>
+    <p>Category: ${{ product.category }}</p>
+    <p>Description: ${{ product.description }}</p>   
+  </div>
+  

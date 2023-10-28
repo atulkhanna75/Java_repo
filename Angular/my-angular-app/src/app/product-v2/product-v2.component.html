@@ -1,0 +1,16 @@
+<div class="product-card">
+  <img [src]="product.thumbnail" alt="Product Image" height="200" width="100">
+  <h2>{{product.title}}</h2>
+  <p>{{product.description + "adssdsdsde"}}</p>
+  <p class="price">{{product.price + 1000}}</p>
+
+  <button (click)="f2()">Click here to see the message from the parent</button>
+
+  <br> 
+
+  <button (click)="f3()">Click here to pass a message to the parent</button>
+  <!-- Type something : <input type=text [(input)]="f()" > -->
+  
+
+  <!-- <sometag [prop1]="new Product()" > </sometag> -->
+</div>

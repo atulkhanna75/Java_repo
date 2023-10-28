@@ -1,0 +1,35 @@
+<div style="border: 2px solid blue">
+    Product list: <br><br>
+
+    <table border="2">
+
+        <thead>
+            <tr>
+                <th>Image</th>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>DSesc</th>
+            </tr>
+          </thead>
+        
+        <div *ngIf="products.length>0">
+            <div *ngFor="let prod of products">
+
+                <tr>
+                    <td> <img [src]="prod.thumbnail" width="60px" height="80px"></td>
+                    <td> {{prod.title}}</td>
+                    <td> {{prod.price}}</td>
+                    <td> {{prod.description}}</td>
+                </tr>
+
+            </div>
+        </div>
+
+        <div *ngIf="products.length==0">
+            No Products to show
+        </div>
+
+    </table>
+
+
+</div>

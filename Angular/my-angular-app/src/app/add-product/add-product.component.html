@@ -1,0 +1,26 @@
+<div>
+    <h2>Add Product</h2>
+    <form [formGroup]="productForm">
+      <div class="form-group">
+        <label for="productName">Product Name:</label>
+        <input id="productName" formControlName="productName" required>
+        <div *ngIf="productForm.get('productName')?.hasError('required')" class="error-message">Product Name is required.</div>
+        <div *ngIf="productForm.get('productName')?.hasError('minlength')" class="error-message">Product Name must be at least 3 characters long.</div>
+      </div>
+      
+      <div class="form-group">
+        <label for="productPrice">Product Price:</label>
+        <input id="productPrice" formControlName="productPrice" required>
+        <div *ngIf="productForm.get('productPrice')?.hasError('required')" class="error-message">Product Price is required.</div>
+        <div *ngIf="productForm.get('productPrice')?.hasError('pattern')" class="error-message">Product Price must be numeric.</div>
+        <div *ngIf="productForm.get('productPrice')?.hasError('max')" class="error-message">Product Price must be less than 100000.</div>      </div>
+  
+      <div class="form-group">
+        <label>On Sale:</label>
+        <label><input type="radio" formControlName="onSale" [value]="true"> Yes</label>
+        <label><input type="radio" formControlName="onSale" [value]="false"> No</label>
+      </div>
+  
+      <button (click)="addProduct()" [disabled]="productForm.invalid" class="btn btn-primary">Add Product</button>
+    </form>
+  </div>

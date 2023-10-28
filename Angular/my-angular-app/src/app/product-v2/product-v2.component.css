@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.product-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h2 {
+    margin: 0 0 10px 0;
+}
+
+.product-card p {
+    margin: 0;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: green;
+    font-size: 1.2em;
+}
